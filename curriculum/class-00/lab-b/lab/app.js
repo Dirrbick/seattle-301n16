@@ -161,11 +161,11 @@ const message = name => `Hello, ${name}`;
 console.log(message('Allie'));
 
 
-let Student = (name, age, hometown) => ({
+let Student = function(name, age, hometown) {
   this.name = name;
   this.age = age;
   this.hometown = hometown;
-});
+};
 
 let joe = new Student('Joe', 'Schmoe', 100);
 
@@ -177,24 +177,22 @@ console.log(joe);
 
 
 
-Student.prototype.greeting = function() {
+Student.prototype.greeting = () => {
   return `Hi, my name is ${this.name}`;
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
 // Note that the arrow function will cause this method to break!
-// console.log(joe.greeting());
+console.log(joe.greeting());
 
 // TODO: After viewing the previous console.log(), return the code to a working state.
 
 
 
-Student.courseName = function() {
-  return 'This student is enrolled in Code 301.';
-};
+Student.courseName = () => 'This student is enrolled in Code 301.';
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(Student.courseName());
+console.log(Student.courseName());
 
 
 
