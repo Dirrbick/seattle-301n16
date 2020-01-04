@@ -94,7 +94,7 @@ console.log('Hello from the old object function', oldObject(['hi', 'hello', 'are
 const newObject = array => ({
   firstValue: array[0],
   secondValue: array[1],
-  thirdValue: array[2]
+  thirdValue: array[2],
 });
 
 // TODO: Uncomment the following line of code to see the output in the browser console
@@ -118,16 +118,22 @@ const sum = (a, b, c, d) => `${a + b + c + d}`;
 console.log(sum(1, 2, 3, 4));
 
 
-let objectLit = function() {
-  return {
-    key1: 'value1',
-    key2: 'value2',
-    key3: 'value3',
-  };
-};
+// let objectLit = function() {
+//   return {
+//     key1: 'value1',
+//     key2: 'value2',
+//     key3: 'value3',
+//   };
+// };
+
+const objectLit = () => ({
+  key1: 'value1',
+  key2: 'value2',
+  key3: 'value3',
+});
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(objectLit());
+console.log(objectLit());
 
 
 let sumAndProduct = function(a, b) {
